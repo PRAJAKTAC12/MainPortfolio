@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website </title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <div class="container"> <!--!container-->
+
+                    <!--!NAVIGATION BAR-->
+            <div class="navbar"> 
+                <div class="logo-container">
+                    <img src="data:image/png;base64,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" class="logo">
+                    <div class="logo-text">rajakta Chaudhari</div>
+                </div>
+
+                <div class="nav-items">
+                    <div> <a href="#projects"> Projects</a></div>
+                    <div> <a href="#skills"> Skills</a></div>
+                    <div> <a href="#contact"> Contact Me</a></div>
+                </div>
+
+            </div>
+                    <!--!HERO SECTION-->
+            <div class="hero-section">
+                <div class="faded-text"> Prajakta Chaudhari </div> <!--!FADED TEXT-->
+    
+                <div class="hero-section-left"> <!--HERO LEFT-->
+                    <div class="hero-Heading"> Hi! Prajakta Chaudhari </div>
+                    <div class="hero-Heading hero-sub-Heading">
+                        I am a <span class="role"></span>  </div>
+                    <div class="hero-Description"> A Java developer versed in Data Structures and Algorithms. Specializing in the MERN stack, I create modern, responsive web applications. Explore my portfolio to see how I blend Java expertise with MERN technologies for innovative solutions! </div>
+                    <div class="btn" id="btn">Hire Me</div>
+                </div>
+    
+                <div class="hero-section-right"> <!--!HERO RIGHT IMAGES-->
+                    <div class="absolute icons icon-dots">
+                        <img src="img/dots.png" alt=""/>
+                    </div>
+                    <div class="absolute icons icon-cube">
+                        <img src="img/cube.png" alt=""/>
+                    </div>
+                    <div class="absolute icons icon-circle">
+                        <img src="img/circle.png" alt=""/>
+                    </div>
+                    <div class="absolute icons icon-zigzag">
+                        <img src="img/zigzags.png" alt=""/>
+                    </div>
+                    <div class="user-image">
+                        <img src="img/Pc.jpeg" style="width: 200px; height:300px";/>
+                    </div>
+                </div>
+
+            </div>
+
+               <!-- Project Section -->
+
+            <div class="project-section" id="projects" >
+                <h2 class="page-header">Projects</h2>
+          
+                <div class="project-container">
+                    <!-- Project1 -->
+                    <div class="project-card" id="project1" >
+                       
+                        <div class="project-number project-number-right">01</div>
+                        <div class="project-content project-content-left">
+                                
+                            <div class="project-skills-container">
+                                <img class="project-skill" src="img/HTML.png" alt="" />
+                                <img class="project-skill" src="img/CSS.png" alt="" />
+                                <img class="project-skill" src="img/Javascript.svg" alt="" />
+                                <!--<img class="project-skill" src="img/Express.png" alt="" />
+                                <img class="project-skill" src="img/NextJsCircle.png" alt="" />
+                                <img class="project-skill" src="img/Tailwind.png" alt="" />
+                                <img class="project-skill" src="img/NodeJs.svg" alt="" />
+                                <img class="project-skill" src="img/MongoDB.svg" alt="" />
+                                <img class="project-skill" src="img/Redux.svg" alt="" />
+                                <img class="project-skill" src="img/Vercel.svg" alt="" />-->
+                            </div>
+
+                            <h2 class="project-heading">Sundown Studio Clone</h2>
+
+                            <p class="project-subHeading">Sundown Studio is a full service creative agency specializing in <br>
+                                experiential marketing, retail experience, events, popups,<br> consumer experience, and digital content, with full design,<br>production, and executional capabilities.
+                            </p>
+                            <div class="btn-grp">
+                                <button class="btn btn-project">Read More</button>
+                                <a href="https://github.com/PRAJAKTAC12/Sundown-Studio-clone">
+                                <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                                </a>
+                                <a href="https://sundownstudiosc.netlify.app/">
+                                <i title="Live Link" class="fa-solid fa-link icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project2 -->
+                    <div class="project-card" id="project2">
+                        
+                    <div class="project-number project-number-left">02</div>
+                    <div class="project-content project-content-right">
+                        <div class="project-skill-container">
+                        <img class="project-skill" src="img/HTML.png" alt="" />
+                        <img class="project-skill" src="img/CSS.png" alt="" />
+                        <img class="project-skill" src="img/Javascript.svg" alt="" />
+
+                        <!--<img class="project-skill" src="img/NextJsCircle.png" alt="" />
+                        <img class="project-skill" src="img/Tailwind.png" alt="" />
+                        <img class="project-skill" src="img/Redux.svg" alt="" />
+                        <img class="project-skill" src="img/Vercel.svg" alt="" />-->
+                        
+                        </div>
+                        <h2 class="project-heading">Two Good Co.Clone</h2>
+                        <p class="project-sub-heading">
+                            Two Good Co is a business for good. Through the creation of beautiful, high quality food and products, we support, empower and employ women with lived experience of homelessness, domestic violence and complex trauma. 
+                        </p>
+                        <div class="btn-group">
+                        <button class="btn btn-project">Read More</button>
+                        <a href="https://github.com/PRAJAKTAC12/two-good-co">
+                            <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                        </a>
+                        <a href="https://two-good-clone2.netlify.app/">
+                            <i title="Live Link" class="fa-solid fa-link icon"></i>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Project3 -->
+                    <div class="project-card" id="project3">
+                    <div class="project-number project-number-right">03</div>
+                    <div class="project-content project-content-left">
+                        <div class="project-skill-container">
+                        <img class="project-skill" src="img/HTML.png" alt="" />
+                        <img class="project-skill" src="img/CSS.png" alt="" />
+                        <!-- <img class="project-skill" src="img/Javascript.svg" alt="" /> -->
+                       <!--<img class="project-skill" src="img/NextJsCircle.png" alt="" />
+                        <img class="project-skill" src="img/Tailwind.png" alt="" />
+                        <img class="project-skill" src="img/Vercel.svg" alt="" />--> 
+                        </div>
+            
+                        <h2 class="project-heading">Gallery Card</h2>
+                        <p class="project-sub-heading">
+                            A gallery card summary typically refers to a brief overview or description presented on a card  in a gallery-style layout. 
+                        </p>
+                        <div class="btn-group">
+                        <button class="btn btn-project">Read More</button>
+                        <a href="https://github.com/PRAJAKTAC12/Gallery-card">
+                            <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                        </a>
+                        <a href="https://github.com/PRAJAKTAC12/Gallery-card/blob/main/index.html">
+                            <i title="Live Link" class="fa-solid fa-link icon"></i>
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Project4 -->
+                    <div class="project-card" id="project4">
+                    <div class="project-number project-number-left">04</div>
+                    <div class="project-content project-content-right">
+                        <div class="project-skill-container">
+                            <img class="project-skill" src="img/HTML.png" alt="" />
+                            <img class="project-skill" src="img/CSS.png" alt="" />
+                            <!-- <img class="project-skill" src="img/Javascript.svg" alt="" /> -->
+
+                        <!--<img class="project-skill" src="img/NextJsCircle.png" alt="" />
+                        <img class="project-skill" src="img/Tailwind.png" alt="" />
+                        <img class="project-skill" src="./images/stack/Vercel.svg" alt="" />-->
+
+                        </div>
+                        <h2 class="project-heading">Parallax Website</h2>
+                        <p class="project-sub-heading">
+                        Parallax scrolling is a computer graphics technique used by web designers to 
+                        create a faux-3D effect. As users scroll down a webpage, different layers of 
+                        content or backgrounds move at different speeds, and this creates an optical illusion. 
+            
+                        </p>
+                        <div class="btn-group">
+                        <button class="btn btn-project">Read More</button>
+                        <a href="https://github.com/PRAJAKTAC12/Parallax-Website">
+                            <i title="GitHubLink" class="fa-brands fa-github icon"></i>
+                        </a>
+                        <a href="https://github.com/PRAJAKTAC12/Parallax-Website/blob/main/index.html">
+                            <i title="Live Link" class="fa-solid fa-link icon"></i>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+             <!-- Skills Section -->
+            <div id="skills" class="container skills-container ">
+            <div class="skill-fade-text">Skills</div>
+  
+            <div class="skill-container-left">
+              <h2 class="skill-heading">
+                <span class="caps">M</span>e and
+                <br />
+                MyTech Stack
+              </h2>
+  
+              <div class="skill-subHeading">
+                <p>
+                  Hi Everyone My name is Prajakta Chaudhari, I am a FrontEnd Developer and
+                  2023 graduate student having keen interest in java languages, 
+                  want to explore technology in deeper looking to have a great journey ahead
+                   I would love to connect with different people around globe....
+                <p>
+                  I am currently learning web development Frontend and backend part and DSA. 
+                  Some of Projects are on its way .
+                 
+                </p>
+                
+              </div>
+            </div>
+  
+            <div class="skill-container-right">
+              <img src="./images/userAsset/blob vector.png" class="blob-style" alt="" />
+  
+              <img src="img/HTML.png" alt="" class="skills-logo" />
+              <img src="img/CSS.png" alt="" class="skills-logo" />
+              <img src="img/Javascript.svg" alt="" class="skills-logo" />
+              <img src="img/React.png" alt="" class="skills-logo" />
+              <img src="img/NodeJs.svg" alt="" class="skills-logo" />
+              <img src="img/Next.svg" alt="" class="skills-logo" />
+              <img src="img/Redux.svg" alt="" class="skills-logo" />
+              <img src="img/Tailwind.png" alt="" class="skills-logo" />
+              <img src="img/Express.png" alt="" class="skills-logo" />
+              <img src="img/Git.svg" alt="" class="skills-logo" />
+              <img src="img/Github.svg" alt="" class="skills-logo" />
+              <img src="img/MongoDB.svg" alt="" class="skills-logo" />
+              
+            </div>
+          
+          
+          
+            </div>
+              <!-- Contact us Section -->
+            <div class="contact-us-container">
+                <div class="container">
+
+                    <h1 class="ContactUs-heading">Contact me</h1>
+                    <h3 class="ContactUs-subheading"> Questions , Thoughts, Or Just Want to Say Hello? </h3>
+
+                    <div class="contactUs-formcontainer">
+                        <form  class="form">
+                            <div class="formfields-container">
+
+                                <input class="formfield"
+                                type="text" name="name"
+                                id="" placeholder="Enter your name"/>
+
+                                <input class="formfield"
+                                type="email" name="email"
+                                id="" placeholder="Enter your email address"/>
+
+                                <input class="formfield"
+                                type="text" name="subject"
+                                id="" placeholder="Enter your subject"/>
+
+                                <textarea class="formfield formfield-textarea"
+                                cols="30" rows="10"
+                                name="message" id="" 
+                                placeholder="Enter your message"> </textarea>     
+                            </div>
+
+                            <button type="submit" class="btn" id="submit-btn">
+                            Send Message <i class="submit-icon fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+           
+            </div>
+             <!-- Footer Section -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-wrapper">
+                        <div class="footer-faded-text">Prajakta Chaudhari</div>
+        
+                        <div class="link-wrapper">
+                            <div>
+                                <a href="#projects">Projects</a>
+                            </div>
+                            <div>
+                                <a href="#skills">Skills</a>
+                            </div>
+                            <div>
+                                <a href="#contact">Contact Me</a>
+                            </div>
+                        </div>
+        
+                        <div class="icon-wrapper">
+                        <a href="https://www.linkedin.com/in/prajakta-chaudhari-b198431b7/" target="_blank"><i class="fa-brands fa-linkedin icon"></i></a>
+                        <a href="https://github.com/PRAJAKTAC12" target="_blank"><i class="fa-brands fa-github icon"></i></a>
+                       
+                        <a href="https://www.instagram.com/prajaktasy/" target="_blank"><i class="fa-brands fa-instagram icon"></i></a>
+                        <a href="mailto: prajaktac7120@gmail.com" target="_blank"><i class="fa-regular fa-envelope icon"></i></a>
+                        </div>
+        
+                    </div>
+               </div>
+            </footer>
+        </div>
+
+   
+
+    <!--!SCRIPT FOR hero-sub-Heading TEXT-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script>
+      var typeData = new Typed(".role", {
+        strings: [
+          "Web Developer",
+          "Frontend Developer",
+          "Coder",
+        ],
+        loop: true,
+        typeSpeed: 10,
+        backSpeed: 80,
+        backDelay: 1000,
+      });
+    </script>
+    
+</body>
+</html>
